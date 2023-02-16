@@ -3,7 +3,7 @@ export class Layer {
     constructor(container) {                         
      container.appendChild(this.createLayer());       //put Canvas to Container
   
-     addEventListener(`resize`, () => this.fitToContainer(), false);
+     window.addEventListener(`resize`, () => this.fitToContainer(), false);
      this.fitToContainer();                        
     }
     createLayer() {

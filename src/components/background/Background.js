@@ -10,7 +10,7 @@ class Background {
   constructor(container) {
     this.layer = new Layer(container);
 
-    addEventListener(`resize`, () => this.createMesh());
+    window.addEventListener(`resize`, () => this.createMesh());
     this.createMesh();
 
     this.loop = new Loop(time => this.update(time), () => this.display());
